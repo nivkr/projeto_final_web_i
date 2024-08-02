@@ -1,0 +1,596 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap';
+}
+
+/* ------------------Header-------------------*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    border-bottom: 2px solid black;
+    background-color: pink;
+    color: black;
+}
+
+header img {
+    width: 125px;
+    height: 125px;
+}
+
+/* ------------------HMenu-------------------*/
+.HMenu {
+    display: grid;
+    grid-template-columns: repeat(2, 110px);
+    grid-template-rows: auto auto;
+    text-align: center;
+    gap: 20px;
+    justify-items: center;
+    float: right;
+}
+
+.HMenu li {
+    color: black;
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.HMenu li:hover {
+    transform: scale(1.2);
+}
+
+li img {
+    height: 40px;
+    width: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ------------------PMenu-------------------*/
+.PMenu a:hover {
+    color: pink;
+}
+
+ol.PMenu {
+    list-style: none;
+    display: grid;
+    padding: 30px;
+    font-size: 20px;
+    grid-template-columns: repeat(5, auto);
+    text-align: center;
+    background: rgb(51, 51, 49);
+    position: relative;
+}
+
+ol.PMenu > li {
+    height: 20px;
+    align-items: center;
+}
+
+ol.PMenu > li:hover > ol {
+    display: block;
+    padding: 20px 0;
+    width: 60%;
+}
+
+ol.PMenu > li > ol, ol.PMenu ol {
+    list-style: none;
+    padding: 0;
+    margin: 2.5px auto;
+    background: rgba(51, 51, 49, 0.84);
+    display: none;
+}
+
+ol.PMenu > li > ol > li {
+    margin-top: 10px;
+    border-bottom: solid gainsboro;
+}
+
+/* ------------------Index-------------------*/
+main{
+    min-height: 60vh;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+}
+
+.index div:first-child {
+    height: 600px;
+    width: 100%;
+}
+
+.index div:first-child img {
+    height: 100%;
+    width: 100%;
+}
+
+.index div:nth-child(2) {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.index div:nth-child(2) span {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.20);
+}
+
+.index > div:nth-child(3) {
+    display: flex;
+}
+
+.index a {
+    padding: 10% 0;
+    text-align: center;
+    width: 50%;
+}
+
+.index a img {
+    width: 80%;
+    border: 2px solid rgba(156, 155, 155, 0.33);
+    border-top: none;
+    border-bottom: none;
+}
+
+.index p {
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.index img:hover {
+    background-color: rgba(222, 222, 222, 0.33);
+}
+
+/* ------------------Footer-------------------*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto auto;
+    gap: 10px 5px;
+    background-color: rgba(106, 106, 106, 0.17);
+    padding: 20px 30px;
+    text-align: initial;
+    margin-top: 20px;
+}
+
+footer div:last-child {
+    color: black;
+    grid-column: 1 / -1;
+    text-align: end;
+    font-weight: bold;
+}
+
+footer div > ol {
+    list-style: none;
+    padding: 0;
+}
+
+footer ol > li {
+    padding-bottom: 5px;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    color: grey;
+}
+
+footer div {
+    padding-top: 5px;
+}
+
+footer div div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom, #b7c12b, #ffa702 130%);
+}
+
+/* ------------------Prod-------------------*/
+.prod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+    margin-left: 2%;
+}
+
+.prod img {
+    height: 30%;
+    width: 30%;
+    border-right: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.prod div {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    width: 90%;
+    margin-left: 5%;
+    justify-content: center;
+}
+
+.prod div .botoes{
+    display: flex;
+    flex-direction: row;
+}
+
+.botoes button{
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+    margin: 30px 10px;
+    font-weight: 500;
+}
+
+.botoes button:hover{
+    background-color: pink;
+    color: black;
+} 
+
+/* ------------------Carrinho-------------------*/
+.carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+}
+
+.carrinho div > div {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.carrinho > div:first-child {
+    width: 50%;
+}
+
+
+.carrinho div > div{
+    display: grid;
+    grid-template-columns: 220px auto auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 3% 0;
+}
+
+.carrinho div > div > p:first-child{
+    color: rgb(175, 175, 175);
+}
+
+.carrinho img {
+    height: 200px;
+}
+
+ .carrinho div > p + p {
+    align-self: self-end;
+    text-align-last: right; 
+}
+
+.carrinho div > div > p:first-child {
+    justify-self: start;
+}
+
+.carrinho > div + div{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.carrinho > div + div > div{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    font-size: 1.5em;
+    justify-content: center;
+}
+
+.carrinho div > div > div{
+    display: block;
+    text-align: end;
+    align-content: end;
+    border: none;
+}
+
+.carrinho div > div > div > p{
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+.carrinho div > div > div > p > i{
+    font-size: 0.8em;
+    font-weight: bold;
+} 
+
+#compra span {
+    background-color: black;
+    color: white;
+    display: block;
+    height: 35px;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bolder;
+    align-content: center;
+    text-align: center;
+}
+
+#compra:hover span{
+    background-color: pink;
+    color: black;
+} 
+
+/* ------------------Media-------------------*/
+
+@media (min-width: 1200px) {
+    .HMenu li {
+        font-size: 1em;
+    }
+
+    .PMenu li {
+        font-size: 1.25em;
+    } 
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .HMenu li {
+        font-size: 0.9em;
+    }
+
+    .PMenu li {
+        font-size: 1.1em;
+    } 
+
+    footer div {
+        font-size: 0.9em;
+    }
+
+}
+
+@media (min-width: 561px) and (max-width: 975px) {
+    .carrinho{
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .carrinho > div:first-child {
+        width: 80%;
+    }
+
+    .carrinho > div + div{
+        width: 70%;
+        
+    }
+
+}
+@media (max-width: 675px){
+    .carrinho{
+        flex-direction: column;
+    }
+
+    .carrinho div > div{
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+    }
+    .carrinho img {
+        width: 70%;
+    }
+
+    .carrinho > div:first-child {
+        width: 80%;
+    }
+
+    .carrinho > div + div{
+        width: 70%;
+    }
+
+    .carrinho div > div > div{
+        display: block;
+        text-align: end;
+        align-content: end;
+    }
+    
+}
+
+@media (min-width: 561px) and (max-width: 767px) {
+
+    .PMenu li{
+        font-size: 1em;
+    }
+
+    .index {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .index div:first-child{
+        height: 350px;
+    }
+
+    .index a {
+        width: 50%;
+    }
+
+    .index a img {
+        width: 80%;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+    .prod{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .prod img{
+        width: 80%;
+        height: 60%;
+    }
+
+    .prod h2{
+        text-align: center;
+    }
+
+    .prod ul{
+        padding: 0 10%;
+    }
+
+    .prod div{
+        padding-top: 5%;
+    }
+
+   
+}
+
+@media (max-width: 560px) {
+    header {
+        padding: 0 5%;
+        justify-content: space-between;
+    }
+
+    header a {
+        width: 20px;
+        height: 20px;
+    }
+
+    #logo a img {
+        width: 50px;
+        height: 50px;        
+    }
+
+    .HMenu {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    ol.HMenu img{
+        height: 30px;
+        width: 30px;
+        margin: 0 5px;
+    }
+
+    .HMenu div a li + li {
+        display: none;
+    }
+
+    .PMenu {
+        font-size: 0.9em;
+        align-items: initial;
+    }
+
+    ol.PMenu {
+        list-style: none;
+        padding: 30px;
+        font-size: 20px;
+        text-align: center;
+        background: rgb(51, 51, 49);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    ol.PMenu > li {
+        height: 20px;
+        margin-top: 5px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+
+    ol.PMenu > li > ol {
+        padding: 0;
+        margin: 2.5px auto;
+        background: rgba(51, 51, 49, 0.84);
+        display: none;
+        flex-direction: column;
+    }
+
+    ol.PMenu li li {
+        margin-top: 10px;
+        border-bottom: solid gainsboro;
+    }
+
+    ol.PMenu li li:last-child {
+        border-bottom: none;
+    }
+
+    ol.PMenu > li > ol, ol.PMenu ol {
+        list-style: none;
+        padding: 0;
+        margin: 40% 0 2.5px 40%;
+    }
+
+    .index > div {
+        display: none;
+    }
+
+    .index > div + div + div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .index a {
+        width: 80%;
+    }
+
+    footer > div:not(:last-child) {
+        display: none;
+    }
+
+    footer > div:last-child {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .prod{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .prod img{
+        width: 80%;
+    }
+
+    .prod h2{
+        text-align: center;
+    }
+
+    .prod ul{
+        padding: 0 10%;
+    }
+
+    .prod div{
+        padding-top: 5%;
+    }
+
+} 
+ 
